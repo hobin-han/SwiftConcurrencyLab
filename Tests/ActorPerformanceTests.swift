@@ -5,57 +5,73 @@
 //  Created by Hobin Han on 9/26/25.
 //
 
+import Foundation
 import Testing
-import SwiftConcurrencyLab
 
 /**
- actor hoping 이 성능을 엄청 잡아먹는구나..! 게다가 MainActor 인 경우에는 어마어마 하다.
+ actor hoping 이 잦을수록 오래걸리고, MainActor 에서의 hoping 은 훨씬 오래 걸린다..!
  */
-
-//@MainActor
 final class ActorPerformanceTests {
     
-    let count: Int = 1_000
+    let count = 1_000
     
-    // 0.003 seconds. (MainActor)
-    // 0.001 seconds. (non MainActor)
-    @Test private func actorPerformance1() async {
-        print("start actor performance 1")
-        await CounterActor().resetSlowly(to: count)
+    /**
+     common Actor 에서 한번만 접근하기.
+     0.0005 seconds
+     */
+    @Test
+    private func testActorPerformanceWithCommonActorAtOnce() async {
+        let since = Date()
+        defer { print(#function, Date().timeIntervalSince(since)) }
+        
+        let actor = CounterActor()
+        await actor.resetSlowly(to: count)
     }
     
-    // 0.245 seconds. (MainActor)
-    // 0.030 seconds. (non MainActor)
-    @Test private func actorPerformance2() async {
-        print("start actor performance 2")
+    /**
+     Main Actor 에서 한번만 접근하기.
+     0.0009 seconds
+     */
+    @Test
+    @MainActor
+    private func testActorPerformanceWithMainActorAtOnce() async {
+        let since = Date()
+        defer { print(#function, Date().timeIntervalSince(since)) }
+        
+        let actor = CounterActor()
+        await actor.resetSlowly(to: count)
+    }
+    
+    /**
+     common Actor 에서 여러번 접근하기.
+     0.0829 seconds
+     */
+    @Test
+    private func testActorPerformanceWithCommonActorSeveralTimes() async {
+        let since = Date()
+        defer { print(#function, Date().timeIntervalSince(since)) }
+        
         let actor = CounterActor()
         await actor.setZero()
         for _ in 0..<count {
             _ = await actor.increment()
         }
     }
-}
-
-actor CounterActor {
-    var value = 0 {
-        didSet {
-            print("value: \(value)")
-        }
-    }
     
-    func increment() -> Int {
-        value = value + 1
-        return value
-    }
-    
-    func setZero() {
-        value = 0
-    }
-    
-    func resetSlowly(to newValue: Int) {
-        value = 0
-        for _ in 0..<newValue {
-            _ = increment()
+    /**
+     Main Actor 에서 여러번 접근하기.
+     0.2813 seconds
+     */
+    @Test
+    @MainActor
+    private func testActorPerformanceWithMainActorSeveralTimes() async {
+        let since = Date()
+        defer { print(#function, Date().timeIntervalSince(since)) }
+        
+        let actor = CounterActor()
+        await actor.setZero()
+        for _ in 0..<count {
+            _ = await actor.increment()
         }
     }
 }
