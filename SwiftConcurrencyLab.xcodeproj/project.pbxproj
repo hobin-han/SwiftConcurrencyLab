@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		11ED6F282E7D352E00C50F59 /* PBXContainerItemProxy */ = {
+		118081142E8A20DF0043F5C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 11ED6EFE2E7D340500C50F59 /* Project object */;
 			proxyType = 1;
@@ -17,32 +17,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		118081102E8A20DF0043F5C4 /* SwiftConcurrencyLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConcurrencyLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11ED6F062E7D340500C50F59 /* SwiftConcurrencyLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		11ED6F242E7D352E00C50F59 /* ImageLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		118081112E8A20DF0043F5C4 /* SwiftConcurrencyLabTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SwiftConcurrencyLabTests;
+			sourceTree = "<group>";
+		};
 		11ED6F082E7D340500C50F59 /* SwiftConcurrencyLab */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SwiftConcurrencyLab;
 			sourceTree = "<group>";
 		};
-		11ED6F252E7D352E00C50F59 /* Tests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Tests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		11ED6F032E7D340500C50F59 /* Frameworks */ = {
+		1180810D2E8A20DF0043F5C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		11ED6F212E7D352E00C50F59 /* Frameworks */ = {
+		11ED6F032E7D340500C50F59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				11ED6F082E7D340500C50F59 /* SwiftConcurrencyLab */,
-				11ED6F252E7D352E00C50F59 /* Tests */,
+				118081112E8A20DF0043F5C4 /* SwiftConcurrencyLabTests */,
 				11ED6F072E7D340500C50F59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				11ED6F062E7D340500C50F59 /* SwiftConcurrencyLab.app */,
-				11ED6F242E7D352E00C50F59 /* ImageLoaderTests.xctest */,
+				118081102E8A20DF0043F5C4 /* SwiftConcurrencyLabTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +73,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1180810F2E8A20DF0043F5C4 /* SwiftConcurrencyLabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 118081182E8A20DF0043F5C4 /* Build configuration list for PBXNativeTarget "SwiftConcurrencyLabTests" */;
+			buildPhases = (
+				1180810C2E8A20DF0043F5C4 /* Sources */,
+				1180810D2E8A20DF0043F5C4 /* Frameworks */,
+				1180810E2E8A20DF0043F5C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				118081152E8A20DF0043F5C4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				118081112E8A20DF0043F5C4 /* SwiftConcurrencyLabTests */,
+			);
+			name = SwiftConcurrencyLabTests;
+			packageProductDependencies = (
+			);
+			productName = SwiftConcurrencyLabTests;
+			productReference = 118081102E8A20DF0043F5C4 /* SwiftConcurrencyLabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		11ED6F052E7D340500C50F59 /* SwiftConcurrencyLab */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11ED6F142E7D340600C50F59 /* Build configuration list for PBXNativeTarget "SwiftConcurrencyLab" */;
@@ -95,29 +118,6 @@
 			productReference = 11ED6F062E7D340500C50F59 /* SwiftConcurrencyLab.app */;
 			productType = "com.apple.product-type.application";
 		};
-		11ED6F232E7D352E00C50F59 /* ImageLoaderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 11ED6F2A2E7D352E00C50F59 /* Build configuration list for PBXNativeTarget "ImageLoaderTests" */;
-			buildPhases = (
-				11ED6F202E7D352E00C50F59 /* Sources */,
-				11ED6F212E7D352E00C50F59 /* Frameworks */,
-				11ED6F222E7D352E00C50F59 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				11ED6F292E7D352E00C50F59 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				11ED6F252E7D352E00C50F59 /* Tests */,
-			);
-			name = ImageLoaderTests;
-			packageProductDependencies = (
-			);
-			productName = ImageLoaderTests;
-			productReference = 11ED6F242E7D352E00C50F59 /* ImageLoaderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -128,12 +128,12 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					11ED6F052E7D340500C50F59 = {
-						CreatedOnToolsVersion = 16.2;
-					};
-					11ED6F232E7D352E00C50F59 = {
+					1180810F2E8A20DF0043F5C4 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 11ED6F052E7D340500C50F59;
+					};
+					11ED6F052E7D340500C50F59 = {
+						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
@@ -152,20 +152,20 @@
 			projectRoot = "";
 			targets = (
 				11ED6F052E7D340500C50F59 /* SwiftConcurrencyLab */,
-				11ED6F232E7D352E00C50F59 /* ImageLoaderTests */,
+				1180810F2E8A20DF0043F5C4 /* SwiftConcurrencyLabTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		11ED6F042E7D340500C50F59 /* Resources */ = {
+		1180810E2E8A20DF0043F5C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		11ED6F222E7D352E00C50F59 /* Resources */ = {
+		11ED6F042E7D340500C50F59 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -175,14 +175,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		11ED6F022E7D340500C50F59 /* Sources */ = {
+		1180810C2E8A20DF0043F5C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		11ED6F202E7D352E00C50F59 /* Sources */ = {
+		11ED6F022E7D340500C50F59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,14 +192,50 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		11ED6F292E7D352E00C50F59 /* PBXTargetDependency */ = {
+		118081152E8A20DF0043F5C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 11ED6F052E7D340500C50F59 /* SwiftConcurrencyLab */;
-			targetProxy = 11ED6F282E7D352E00C50F59 /* PBXContainerItemProxy */;
+			targetProxy = 118081142E8A20DF0043F5C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		118081162E8A20DF0043F5C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z234RLVBT8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hobin.SwiftConcurrencyLabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftConcurrencyLab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftConcurrencyLab";
+			};
+			name = Debug;
+		};
+		118081172E8A20DF0043F5C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z234RLVBT8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hobin.SwiftConcurrencyLabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftConcurrencyLab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftConcurrencyLab";
+			};
+			name = Release;
+		};
 		11ED6F122E7D340600C50F59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -377,45 +413,18 @@
 			};
 			name = Release;
 		};
-		11ED6F2B2E7D352E00C50F59 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z234RLVBT8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hobin.ImageLoaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftConcurrencyLab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftConcurrencyLab";
-			};
-			name = Debug;
-		};
-		11ED6F2C2E7D352E00C50F59 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z234RLVBT8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hobin.ImageLoaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftConcurrencyLab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftConcurrencyLab";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		118081182E8A20DF0043F5C4 /* Build configuration list for PBXNativeTarget "SwiftConcurrencyLabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				118081162E8A20DF0043F5C4 /* Debug */,
+				118081172E8A20DF0043F5C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		11ED6F012E7D340500C50F59 /* Build configuration list for PBXProject "SwiftConcurrencyLab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -430,15 +439,6 @@
 			buildConfigurations = (
 				11ED6F152E7D340600C50F59 /* Debug */,
 				11ED6F162E7D340600C50F59 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		11ED6F2A2E7D352E00C50F59 /* Build configuration list for PBXNativeTarget "ImageLoaderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				11ED6F2B2E7D352E00C50F59 /* Debug */,
-				11ED6F2C2E7D352E00C50F59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
