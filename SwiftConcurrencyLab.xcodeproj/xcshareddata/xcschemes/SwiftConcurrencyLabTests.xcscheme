@@ -19,7 +19,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "118080A42E8A1F060043F5C4"
+               BlueprintIdentifier = "1180810F2E8A20DF0043F5C4"
                BuildableName = "SwiftConcurrencyLabTests.xctest"
                BlueprintName = "SwiftConcurrencyLabTests"
                ReferencedContainer = "container:SwiftConcurrencyLab.xcodeproj">
