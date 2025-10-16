@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "13A13E6F-4391-4776-BE80-17F8BDCDE50E",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SwiftConcurrencyLab.xcodeproj",
+        "identifier" : "1180810F2E8A20DF0043F5C4",
+        "name" : "SwiftConcurrencyLabTests"
+      }
+    }
+  ],
+  "version" : 1
+}

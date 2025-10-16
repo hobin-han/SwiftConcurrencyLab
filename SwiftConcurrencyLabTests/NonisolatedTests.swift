@@ -19,13 +19,13 @@ class NonisolatedTests {
     
     func inheritedActorContextTask() {
         Task {
-            print(#function, Thread.isMainThread)
+            #expect(#isolation === MainActor.shared)
         }
     }
     
     nonisolated func nonInheritedActorContextTask() {
         Task {
-            print(#function, Thread.isMainThread)
+            #expect(#isolation !== MainActor.shared)
         }
     }
 }

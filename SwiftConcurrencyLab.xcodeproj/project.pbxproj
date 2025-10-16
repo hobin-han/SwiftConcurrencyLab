@@ -17,6 +17,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1160B49E2E9CDC5500B6FC78 /* SwiftConcurrencyLabTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftConcurrencyLabTests.xctestplan; sourceTree = "<group>"; };
 		118081102E8A20DF0043F5C4 /* SwiftConcurrencyLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConcurrencyLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11ED6F062E7D340500C50F59 /* SwiftConcurrencyLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -55,6 +56,7 @@
 		11ED6EFD2E7D340500C50F59 = {
 			isa = PBXGroup;
 			children = (
+				1160B49E2E9CDC5500B6FC78 /* SwiftConcurrencyLabTests.xctestplan */,
 				11ED6F082E7D340500C50F59 /* SwiftConcurrencyLab */,
 				118081112E8A20DF0043F5C4 /* SwiftConcurrencyLabTests */,
 				11ED6F072E7D340500C50F59 /* Products */,
