@@ -12,19 +12,25 @@ import Testing
 class NonisolatedTests {
     
     @Test
-    private func nonIsolatedTest() async {
-        inheritedActorContextTask()
-        nonInheritedActorContextTask()
-    }
-    
     func inheritedActorContextTask() {
         Task {
+            #expect(#isolation === MainActor.shared)
+            
+            let actor = CounterActor()
+            await actor.resetSlowly(to: 10)
+            
             #expect(#isolation === MainActor.shared)
         }
     }
     
+    @Test
     nonisolated func nonInheritedActorContextTask() {
         Task {
+            #expect(#isolation !== MainActor.shared)
+            
+            let actor = CounterActor()
+            await actor.resetSlowly(to: 10)
+            
             #expect(#isolation !== MainActor.shared)
         }
     }
