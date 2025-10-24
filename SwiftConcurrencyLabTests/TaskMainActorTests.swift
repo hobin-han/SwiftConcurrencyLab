@@ -28,3 +28,40 @@ struct TaskMainActorTests {
         #expect(#isolation !== MainActor.shared)
     }
 }
+
+
+actor TaskMainActorTests2 {
+    
+    @Test func testIsMainThreadInClosure() {
+        #expect(#isolation !== MainActor.shared)
+        Task { @MainActor in
+            doSomething {
+                #expect(#isolation === MainActor.shared)
+                Task {
+                    #expect(#isolation === MainActor.shared)
+                    await asyncFunction()
+                }
+            }
+        }
+    }
+    
+    @Test func testIsMainThreadInClosure2() async {
+        #expect(#isolation !== MainActor.shared)
+        await doSomething {
+            #expect(#isolation !== MainActor.shared)
+            Task {
+                #expect(#isolation !== MainActor.shared)
+                asyncFunction()
+            }
+        }
+    }
+    
+    @MainActor func doSomething(completion: () -> Void) {
+        #expect(#isolation === MainActor.shared)
+        completion()
+    }
+    
+    func asyncFunction() {
+        #expect(#isolation !== MainActor.shared)
+    }
+}
